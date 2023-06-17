@@ -45,7 +45,7 @@ export default function Home() {
 
               {
                 err && 
-                <p>{err?.response?.data?.message}</p>
+                <p className='text-white'>{err?.response?.data?.message}</p>
               }
               
           </div>
