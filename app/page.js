@@ -30,12 +30,14 @@ export default function Home() {
                   </form>
                 :
                 <div className='w-full flex flex-col place-content-center place-items-center gap-5'>
-                  <Image src={`https://openweathermap.org/img/wn/${weather?.weather[0].icon}@4x.png`} alt={'weather-icon'} width={100} height={70}/>
-                  <div className='flex flex-col gap-3 text-center'>
-                    <h1 className='font-semibold text-xl text-center'>{weather.name}</h1>
-                    <p className='text-white text-lg'>temp : {weather?.main.temp}&deg;c</p>
-                    <p className='text-white text-lg'>humidity : {weather?.main.humidity}</p>
-                    <p className='text-white text-lg'>desc : {weather?.weather[0].description}</p>
+                  <div className='flex gap-3 w-full place-content-center'>
+                    <Image src={`https://openweathermap.org/img/wn/${weather?.weather[0].icon}@4x.png`} alt={'weather-icon'} width={100} height={70}/>
+                    <div className='flex flex-col gap-3 text-center'>
+                      <h1 className='font-semibold text-xl text-center'>{weather.name}</h1>
+                      <p className='text-white text-lg'>temp : {weather?.main.temp}&deg;c</p>
+                      <p className='text-white text-lg'>humidity : {weather?.main.humidity}</p>
+                      <p className='text-white text-lg'>desc : {weather?.weather[0].description}</p>
+                    </div>
                   </div>
                   <button className='w-1/4 bg-black text-white font-semibold px-5 py-3 rounded-2xl' onClick={()=>setWeather('')}>Check another</button>
                 </div>
